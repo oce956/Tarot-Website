@@ -169,3 +169,43 @@ button.red    { background-color: #ffc9c9; color: #6b0000; }
 .hidden {
   display: none;
 }
+
+/*For flashcards.html*/
+
+/* Grid layout for flashcards menu */
+.card-grid {
+  display: flex;
+  justify-content: center;  /* centers the cards horizontally */
+  gap: 1.5rem;              /* space between them */
+  flex-wrap: wrap;          /* allows them to stack on smaller screens */
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+/* Menu cards */
+.mode-card {
+  background: #f4ecfa;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(120, 70, 170, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 6px solid #a174c7;
+  text-align: center;
+}
+
+.mode-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(120, 70, 170, 0.2);
+}
+
+.mode-link {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3a1f4b;
+  margin-bottom: 0.5rem;
+}
+
+/*For flashacards.html*/
