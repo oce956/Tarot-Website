@@ -1,0 +1,50 @@
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: #a174c7;
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 10px rgba(100, 50, 150, 0.2);
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar nav a {
+  color: #f0e9ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: #8f5eb7;
+}
+
+.sidebar nav a.active {
+  background: #6d42a7;
+  font-weight: bold;
+}
+
+/* Page content beside sidebar */
+.content {
+  margin-left: 220px;
+  padding: 2rem;
+  text-align: center;
+}

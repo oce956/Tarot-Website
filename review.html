@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Cards</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+
+  <!-- Tarot Data -->
+  <script src="tarot-data.js"></script>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="sidebar">
+    <h2>🔮 Tarot Learner</h2>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="flashcards.html" class="active">🎴 Flashcards</a>
+      <a href="games.html">🕹️ Games</a>
+      <a href="daily.html">🗓️ Daily</a>
+    </nav>
+  </div>
+  <main class="content" id="main-content">
+    <h1>🌌 Review Cards</h1>
+    <p class="mode-label">Mode: Review</p>
+
+    <div class="card new" id="card-box">
+      <h2 id="card-name">Card Name</h2>
+      <img id="card-image" src="" alt="Tarot card">
+      <p id="card-meaning" class="hidden">Card meaning goes here</p>
+
+      <!-- Reveal Button -->
+      <div class="reveal-container" id="reveal-container">
+        <button class="reveal-button" onclick="showAnswer()">🔮 Reveal Meaning</button>
+      </div>
+
+      <!-- Rating Buttons -->
+      <div class="buttons hidden" id="rating-buttons">
+        <button class="blue" onclick="rateCard('great')">🔵 3 days</button>
+        <button class="green" onclick="rateCard('good')">🟢 1 day</button>
+        <button class="yellow" onclick="rateCard('meh')">🟡 30 mins</button>
+        <button class="red" onclick="rateCard('bad')">🔴 1 min</button>
+      </div>
+    </div>
+
+    <!-- Optional: Done screen when all cards are rated -->
+    <div id="done-screen" class="hidden">
+      <h2>✨ You're all caught up!</h2>
+      <p>You've reviewed all the tarot cards for now.</p>
+      <button id="explore-button">Explore</button>
+    </div>
+  </main>
+
+  <!-- Explore Mode Script -->
+  <script src="review.js"></script>
+</body>
+</html>

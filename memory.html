@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarot Memory Game</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="memory.css" />
+
+  <!-- Tarot Data & Game JS -->
+  <script src="tarot-data.js"></script>
+  <script src="memory.js" defer></script>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>🔮 Tarot Learner</h2>
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="flashcards.html">🎴 Flashcards</a>
+        <a href="games.html" class="active">🕹️ Games</a>
+        <a href="daily.html">🗓️ Daily</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <h1>🃏 Memory Game</h1>
+      <p>Find the matching description to the image!</p>
+      <div id="game-board" class="memory-grid"></div>
+      <button id="play-again">Play again</button>
+    </main>
+  </div>
+</body>
+</html>

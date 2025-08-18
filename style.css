@@ -1,0 +1,230 @@
+/* Base Layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e6d6f2, #cbb4e3);
+  color: #3a1f4b;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Page Container */
+.page {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Flashcard Card Style */
+.card {
+  background: #f4ecfa;
+  color: #3a1f4b;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(120, 70, 170, 0.2);
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: transform 0.3s, border-color 0.3s;
+  border: 3px solid transparent;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.reveal-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #d3bfff;
+  color: #3a1f4b;
+  box-shadow: 0 4px 12px rgba(150, 100, 200, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.reveal-button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 12px 4px rgba(106, 106, 255, 0.6);
+}
+
+/* Card Border Colors */
+.card.great { border-color: #6a6aff; }
+.card.good  { border-color: #2e8531; }
+.card.meh   { border-color: #a89000; }
+.card.bad   { border-color: #a11a1a; }
+.card.new   { border: 3px dashed #999; }
+
+/* Buttons Container */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+/* Flashcard Buttons */
+.buttons button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(150, 100, 200, 0.3);
+}
+
+button.blue   { background-color: #b6aaff; color: #2b2d6e; }
+button.green  { background-color: #baffc9; color: #2e5731; }
+button.yellow { background-color: #fff7a8; color: #635f00; }
+button.red    { background-color: #ffc9c9; color: #6b0000; }
+
+.buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Done Screen */
+#done-screen {
+  background: #f4ecfa;
+  color: #3a1f4b;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(120, 70, 170, 0.2);
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: transform 0.3s;
+}
+
+#done-screen button {
+  background-color: #d3bfff;
+  color: #3a1f4b;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(150, 100, 200, 0.3);
+  transition: 0.3s ease;
+}
+
+#done-screen button:hover {
+  transform: scale(1.05);
+}
+
+/* Explore Mode Grid */
+#explore-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Explore Cards */
+.explore-card {
+  background: #f4ecfa;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(120, 70, 170, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  border-left: 6px solid #a174c7;
+}
+
+.explore-card.great { border-left-color: #6a6aff; }
+.explore-card.good  { border-left-color: #2e8531; }
+.explore-card.meh   { border-left-color: #a89000; }
+.explore-card.bad   { border-left-color: #a11a1a; }
+.explore-card.new   { border-left: 6px dashed #999; }
+
+.explore-card strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #3a1f4b;
+  margin-bottom: 0.5rem;
+}
+
+.explore-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(120, 70, 170, 0.2);
+}
+
+/* Section Titles in Explore Mode */
+#explore-container h3 {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #6d42a7;
+  border-bottom: 2px dashed #a174c7;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#explore-container h3.great   { color: #6a6aff; }
+#explore-container h3.good    { color: #2e8531; }
+#explore-container h3.meh     { color: #a89000; }
+#explore-container h3.bad     { color: #a11a1a; }
+#explore-container h3.unrated { color: #888; }
+
+/* Mode Label */
+.mode-label {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #d3bfff;
+  color: #3a1f4b;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(150, 100, 200, 0.2);
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/*For flashcards.html*/
+
+/* Grid layout for flashcards menu */
+.card-grid {
+  display: flex;
+  justify-content: center;  /* centers the cards horizontally */
+  gap: 1.5rem;              /* space between them */
+  flex-wrap: wrap;          /* allows them to stack on smaller screens */
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+/* Menu cards */
+.mode-card {
+  background: #f4ecfa;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(120, 70, 170, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 6px solid #a174c7;
+  text-align: center;
+}
+
+.mode-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(120, 70, 170, 0.2);
+}
+
+.mode-link {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3a1f4b;
+  margin-bottom: 0.5rem;
+}
+
+/*For flashacards.html*/

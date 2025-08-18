@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #a174c7;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(100, 50, 150, 0.2);
+}
+
+.nav-left a {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.nav-right a {
+  color: #f0e9ff;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-right a:hover {
+  opacity: 1;
+  color: #3a1f4b;
+}
+
+.nav-left a:hover{
+    color: #3a1f4b;
+}
+
