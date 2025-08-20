@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Daily Tarot</title>
+  <link rel="stylesheet" href="xp.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sidebar.css">
+
+  <script src="xp.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -16,6 +19,15 @@
       <a href="daily.html" class="active">🗓️ Daily</a>
     </nav>
   </div>
+
+  <!--XP-->
+    <div id="xp-display" class="xp-display">
+      <span>Level: <span id="level">1</span></span>
+      <span>XP: <span id="xp">0</span></span>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="xp-bar"></div>
+      </div>
+    </div>
 
   <main class="content">
     <h2>🗓️ Today's Tarot Reflection</h2>

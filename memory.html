@@ -6,11 +6,13 @@
   <title>Tarot Memory Game</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="xp.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="sidebar.css" />
   <link rel="stylesheet" href="memory.css" />
 
   <!-- Tarot Data & Game JS -->
+   <script src="xp.js"></script>
   <script src="tarot-data.js"></script>
   <script src="memory.js" defer></script>
 </head>
@@ -26,7 +28,14 @@
         <a href="daily.html">🗓️ Daily</a>
       </nav>
     </div>
-
+    <!--XP-->
+    <div id="xp-display" class="xp-display">
+      <span>Level: <span id="level">1</span></span>
+      <span>XP: <span id="xp">0</span></span>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="xp-bar"></div>
+      </div>
+    </div>
     <!-- Main Content -->
     <main>
       <h1>🃏 Memory Game</h1>

@@ -1,3 +1,46 @@
+// ===== XP SYSTEM =====
+if (!localStorage.getItem("xp")) localStorage.setItem("xp", 0);
+if (!localStorage.getItem("level")) localStorage.setItem("level", 1);
+
+function addXP(amount) {
+  let xp = parseInt(localStorage.getItem("xp"));
+  let level = parseInt(localStorage.getItem("level"));
+
+  xp += amount;
+
+  while (xp >= 100) { // Level up every 100 XP
+    xp -= 100;
+    level++;
+  }
+
+  localStorage.setItem("xp", xp);
+  localStorage.setItem("level", level);
+
+  updateXPDisplay();
+}
+
+function updateXPDisplay() {
+  const xp = parseInt(localStorage.getItem("xp"));
+  const level = parseInt(localStorage.getItem("level"));
+
+  const xpEl = document.getElementById("xp");
+  const levelEl = document.getElementById("level");
+
+  if (xpEl) xpEl.textContent = xp;
+  if (levelEl) levelEl.textContent = level;
+
+  const xpBar = document.getElementById("xp-bar");
+  if (xpBar) xpBar.style.width = Math.min((xp / 100) * 100, 100) + "%";
+}
+
+// Update UI on page load
+window.addEventListener("DOMContentLoaded", () => {
+  updateXPDisplay();
+});
+
+
+// ===== MEMORY GAME =====
+
 // Pick random cards from allCards
 function pickRandomCards(num) {
   const shuffled = [...allCards].sort(() => Math.random() - 0.5);
@@ -88,6 +131,8 @@ function checkForMatch() {
 
   if (isMatch) {
     disableCards();
+    // XP for a successful match
+    addXP(2);
   } else {
     unflipCards();
   }
@@ -98,6 +143,12 @@ function disableCards() {
   firstCard.classList.add("matched");
   secondCard.classList.add("matched");
   resetTurn();
+
+  // Check if all cards are matched → bonus XP
+  const allMatched = document.querySelectorAll(".card:not(.matched)").length === 0;
+  if (allMatched) {
+    addXP(10);
+  }
 }
 
 // Flip back if no match
@@ -107,7 +158,7 @@ function unflipCards() {
     firstCard.classList.remove("flipped");
     secondCard.classList.remove("flipped");
     resetTurn();
-  }, 3000);
+  }, 3000); // shorter delay, feels smoother
 }
 
 // Reset the selection

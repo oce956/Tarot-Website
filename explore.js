@@ -76,12 +76,25 @@ function showAnswer() {
 function rateCard(rating) {
   const now = Date.now();
   let nextInterval;
+  let XPamount = 0;
 
   switch (rating) {
-    case "great": nextInterval = 3 * 24 * 60 * 60 * 1000; break;
-    case "good": nextInterval = 1 * 24 * 60 * 60 * 1000; break;
-    case "meh": nextInterval = 30 * 60 * 1000; break;
-    case "bad": nextInterval = 1 * 60 * 1000; break;
+    case "great": 
+      nextInterval = 3 * 24 * 60 * 60 * 1000;
+      XPamount = 15;
+      break;
+    case "good": 
+      nextInterval = 1 * 24 * 60 * 60 * 1000;
+      XPamount = 10;
+      break;
+    case "meh": 
+      nextInterval = 30 * 60 * 1000; 
+      XPamount = 5;
+      break;
+    case "bad": 
+      nextInterval = 1 * 60 * 1000;
+      XPamount = 1; 
+      break;
   }
 
   const updatedProgress = JSON.parse(localStorage.getItem("tarotProgress") || "{}");
@@ -95,7 +108,7 @@ function rateCard(rating) {
   deck = deck.map(c =>
     c.id === currentCard.id ? { ...c, seen: true, rating } : c
   );
-
+  addXP(XPamount);
   showNextCard();
 }
 

@@ -398,7 +398,7 @@ window.allCards = [
   {
     id: "kinghtWandsU",
     name: "Knight of Wands - Upright",
-    meaning: "*Adventure, fearlessness, action, pursuing dreams, enthusiasm, sexy, lust",
+    meaning: "Adventure, fearlessness, action, pursuing dreams, enthusiasm, sexy, lust",
     img: "I - knightW-up.jpg"
   },
   {
@@ -470,7 +470,7 @@ window.allCards = [
   {
     id: "fourCupsU",
     name: "Four of Cups - Upright",
-    meaning: "NEed to meditate, self-reflection, contemplation, sorting out the options, boredrom, pushing away help, apathy",
+    meaning: "Need to meditate, self-reflection, contemplation, sorting out the options, boredrom, pushing away help, apathy",
     img: "I - fourC-up.jpg"
   },
   {
@@ -807,7 +807,7 @@ window.allCards = [
     id: "fourPentU",
     name: "Four of Pentacles - Upright",
     meaning: "Material success, secured money, security, stabilitu, possessiveness & inability to open up in relationships",
-    img: "I - fourP-up.jpg"
+    img: "I - fourP-u.jpg"
   },
   {
     id: "fourPentR",

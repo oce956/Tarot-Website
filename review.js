@@ -65,12 +65,22 @@ function showAnswer() {
 function rateCard(rating) {
   const saved = JSON.parse(localStorage.getItem("tarotProgress") || "{}");
 
+  let XPamount = 0;
+  switch(rating){
+    case "great": XPamount = 15; break;
+    case "good": XPamount = 10; break;
+    case "meh": XPamount = 5; break;
+    case "bad": XPamount = 1; break;
+  }
+
   saved[currentCard.id] = {
     rating,
     nextDue: Date.now() + delayMap[rating]
   };
 
   localStorage.setItem("tarotProgress", JSON.stringify(saved));
+
+  addXP(XPamount);
 
   // Remove the card from the review deck
   reviewDeck = reviewDeck.filter(card => card.id !== currentCard.id);

@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Mini Games</title>
+  <link rel="stylesheet" href="xp.css"> 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sidebar.css">
   <link rel="stylesheet" href="game.css">
+
+  <script src="xp.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -17,7 +20,14 @@
       <a href="daily.html">🗓️ Daily</a>
     </nav>
   </div>
-
+    <!--XP-->
+    <div id="xp-display" class="xp-display">
+      <span>Level: <span id="level">1</span></span>
+      <span>XP: <span id="xp">0</span></span>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="xp-bar"></div>
+      </div>
+    </div>
   <div class="content">
     <h2>🕹️ Mini Games Coming Soon</h2>
     <p>Practice tarot meanings through fun and games — stay tuned!</p>

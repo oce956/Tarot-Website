@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tarot Flashcards</title>
+
+  <link rel="stylesheet" href="xp.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sidebar.css">
+
+  <script src="xp.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -17,6 +21,15 @@
       <a href="daily.html">🗓️ Daily</a>
     </nav>
   </div>
+
+  <!--XP-->
+    <div id="xp-display" class="xp-display">
+      <span>Level: <span id="level">1</span></span>
+      <span>XP: <span id="xp">0</span></span>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="xp-bar"></div>
+      </div>
+    </div>
 
   <main class="content">
   <h1>Tarot Flashcards</h1>

@@ -1,0 +1,42 @@
+/* Container */
+.xp-display {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(145deg, #8e44ad, #c39bd3); /* purple gradient */
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-family: 'Verdana', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Level & XP numbers */
+.xp-display span {
+  font-weight: bold;
+  color: #ffefc2;
+}
+
+/* Optional XP bar */
+.xp-bar-container {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100px;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.xp-bar {
+  background: #f1c40f; /* gold */
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
