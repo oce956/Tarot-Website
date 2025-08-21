@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="game.css">
 
   <script src="xp.js"></script>
+  <script src="games.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -33,27 +34,28 @@
     <p>Practice tarot meanings through fun and games — stay tuned!</p>
   </div>
     <main class="game-grid">
-    <!-- Game 1 -->
-    <a href="memory.html">
-      <div class="game-card">
-        <img src="memory-screenshot.png" alt="Memory game">
-        <h2>Memory</h2>
-      </div>
-    </a>
+  <!-- Game 1 -->
+  <div class="game-card locked" data-required-level="5">
+    <img src="memory-screenshot.png" alt="Memory game">
+    <h2>Memory</h2>
+    <div class="lock-overlay">
+      Available at Level 5
+    </div>
+  </div>
 
-    <!-- Game 2 -->
-      <div class="game-card">
-        <h2>Game 2</h2>
-      </div>
-    </a>
+  <!-- Game 2 -->
+  <div class="game-card">
+    <h2>Game 2</h2>
+  </div>
 
-    <!-- Game 3 -->
-      <div class="game-card">
-        <h2>Game 3</h2>
-      </div>
-    </a>
+  <!-- Game 3 -->
+  <div class="game-card">
+    <h2>Game 3</h2>
+  </div>
+</main>
 
-    <!-- Add more games here -->
-  </main>
+<script src="xp.js"></script>
+<script src="games.js"></script>
+
 </body>
 </html>
