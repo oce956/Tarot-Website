@@ -89,3 +89,7 @@ a {
 .game-card.unlocked .lock-overlay {
   display: none;
 }
+
+h2 {
+  color: white;
+}
